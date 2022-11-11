@@ -19,3 +19,15 @@ DeviceType Device::getType() const
 {
 	return _type;
 }
+bool Device::isActive() const 
+{
+	return _active;
+}
+void Device::activate() 
+{
+	_active = true;
+}
+void Device::deactivate()
+{
+	_active = false;
+}
