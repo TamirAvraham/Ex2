@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Device.cpp" />
-    <ClCompile Include="Ex2.cpp" />
+    <ClCompile Include="DeviceTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Device.h" />

@@ -1,5 +1,7 @@
+#ifndef DEVICE
+#define DEVICE
 
-#pragma once
+
 #include <string>
 
 ///////////////////////////////////////////////////////////
@@ -29,7 +31,7 @@ private:
 	std::string _os;
 	bool _active;
 public:
-	void init(unsigned int id, DeviceType type, std::string& os);
+	void init(unsigned int id, DeviceType type,const std::string& os);
 	unsigned int getID()const;
 	DeviceType getType()const;
 	std::string getOS()const;
@@ -38,3 +40,4 @@ public:
 	void deactivate();
 };
 
+#endif // !DEVICE
