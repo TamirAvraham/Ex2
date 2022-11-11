@@ -19,12 +19,25 @@ unsigned int User::getAge()const{
 unsigned int User::getID()const{
 	return _id;
 }
-std::string User::getUsername()const {
+std::string User::getUserName()const {
 	return _username;
 }
-DevicesList& User::getDeviceList()const{
-	return (DevicesList&)_devicelist;
+DevicesList& User::getDevices()const{
+	return *_devicelist;
 }
-void User::AddDevice(const Device& device){
+void User::addDevice(const Device& device){
 	_devicelist->add(device);
+}
+bool User::checkIfDevicesAreOn()const {
+	
+	DeviceNode* copy = _devicelist->get_first();
+	while (copy) {
+		
+		if (!(copy->get_data().isActive()))
+		{
+			return false;
+		}
+		copy = copy->get_next();
+	}
+	return true;
 }

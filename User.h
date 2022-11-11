@@ -13,9 +13,9 @@ public:
 	void clear();
 	unsigned int getAge()const;
 	unsigned int getID()const;
-	std::string getUsername()const;
-	DevicesList& getDeviceList()const;
-	void AddDevice(const Device& device);
+	std::string getUserName()const;
+	DevicesList& getDevices()const;
+	void addDevice(const Device& device);
 	bool checkIfDevicesAreOn()const;
 };
 
