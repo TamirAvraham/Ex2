@@ -7,8 +7,8 @@ private:
 	std::string _posts;
 public:
 	void init();
-	std::string& getPosts()const;
-	std::string& getStatus()const;
+	std::string& getPosts();
+	std::string& getStatus();
 	void clearPage();
 	void setStatus(const std::string& status);
 	void addLineToPosts(const std::string& new_line);

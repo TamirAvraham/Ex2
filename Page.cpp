@@ -3,10 +3,10 @@
 void Page::init() {
 	_posts = "";
 }
-std::string& Page::getPosts()const {
+std::string& Page::getPosts() {
 	return _posts;
 }
-std::string& Page::getStatus()const {
+std::string& Page::getStatus() {
 	return _status;
 }
 void Page::clearPage() {
