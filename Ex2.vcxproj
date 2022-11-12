@@ -130,6 +130,7 @@
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceList.cpp" />
     <ClCompile Include="Page.cpp" />
+    <ClCompile Include="Profile.cpp" />
     <ClCompile Include="UserList.cpp" />
     <ClCompile Include="UserTest.cpp" />
     <ClCompile Include="User.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceList.h" />
     <ClInclude Include="Page.h" />
+    <ClInclude Include="Profile.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="UserList.h" />
   </ItemGroup>
