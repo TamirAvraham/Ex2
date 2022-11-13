@@ -578,7 +578,7 @@ int main()
     // Remove comments to check bonus //
     ////////////////////////////////////
 
-    //bool BonusResult = test3Bonus();
+    bool BonusResult = test3Bonus();
 
     if (testResult)
     {

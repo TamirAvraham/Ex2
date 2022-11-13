@@ -77,20 +77,41 @@ std::string Profile::getFriendsWithSameNameLength()const {
 
 void Profile::changeAllWordsInStatus(const std::string& word)
 {
-	std::string newWord=word + ' ';
-	std::vector<std::string> allWordsInStatus;
-	allWordsInStatus.begin();
-	split_str(_page->getStatus(), ' ', allWordsInStatus);
-	std::string status = _page->getStatus();
-	for (auto i = allWordsInStatus.cbegin(); i != allWordsInStatus.cend(); ++i)
+	std::string stat = _page->getStatus();
+	std::string ret = "";
+	for (int i = 0; i < stat.length(); i++)
 	{
-		std::string iValue = i._Ptr->c_str();
-		_page->getStatus().replace(status.find(iValue)+2, iValue.length(), newWord);
+		char curr = stat[i];
+		char next = stat[i+1];
+		bool IsChar = curr != ' ' && curr != ' \t' && curr != '\n' && i < word.length() - 1;
+		if (IsChar && i < word.length() - 1)
+		{
+			if (next == ' ' || next == '\t' || next == '\n')
+			{
+				ret += word;
+			}
+			
+		}
+		else if (IsChar && i == word.length() - 1)
+		{
+			ret += word;
+		}
+		else if(curr == ' ' || curr == '\t' || curr == '\n')
+		{
+			ret += curr;
+		}
+		
 	}
-	std::cout << "\n" << status << "\n";
+	_page->setStatus(ret);
 }
 void Profile::changeWordInStatus(const std::string& word_to_replace, const std::string& new_word)
 {
+	int i = 0;
+	std::string& status = _page->getStatus();
+	while ((i=status.find(word_to_replace))!=std::string::npos)
+	{
+		status.replace(i, word_to_replace.length(), new_word);
+	}
 	
 
 }
